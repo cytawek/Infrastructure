@@ -8,7 +8,7 @@ services:
       - 50000:50000
     restart: always
   sonarqube:
-    build: sonarqube:10.2.1-comunity
+    image: sonarqube:10.2.1-community
     depends_on:
       - jenkins
     ports:
