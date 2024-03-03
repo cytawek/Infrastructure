@@ -9,24 +9,26 @@ jenkins:
       permissions:
         - "Overall/Administer:panda"
 
-tool:
-  sonarRunnerInstallation:
-    installations:
-    - name: "SonarQube"
-      properties:
-      - installSource:
-          installers:
-          - sonarRunnerInstaller:
-              id: "5.0.1.3006"
-
 unclassified:
   location:
     url: "http://192.168.44.44:8880/"
-  sonarGlobalConfiguration:
-    buildWrapperEnabled: true
+
+tool:
+  sonarRunnerInstallation:
     installations:
-    - name: "SonarQube"
-      serverUrl: "http://192.168.44.44:9000"
+    - name: 'Sonarqube'
+      properties:
+      - installSource:
+        installers:
+        - sonarRunnerInstaller:
+          id: '5.0.1.3006'
+
+unclassified:
+  sonarGlobalConfiguraction:
+    buildWrapperEnabled: truje
+    installations:
+    - name: 'SonarQube'
+      serverUrl: 'http://192.168.44.44:9000'
       triggers:
         skipScmCause: false
         skipUpstreamCause: false
